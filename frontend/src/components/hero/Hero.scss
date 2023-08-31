@@ -1,0 +1,82 @@
+@import "../../App.scss";
+
+.carouselContainer {
+  width: 99vw;
+  background-color: black;
+
+  .cardContainer {
+    height: 550px;
+    background-color: black;
+
+    .card {
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)
+      );
+
+      .details {
+        position: absolute;
+        top: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+
+        @include mobile {
+          flex-direction: column;
+          align-items: center;
+          top: 20px;
+        }
+
+        .poster {
+          background-color: transparent;
+          height: 300px;
+          border: 1px solid gold;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .title {
+          color: white;
+          display: flex;
+          align-items: center;
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 300px;
+
+          .play {
+            padding: 0;
+            margin: 0;
+            width: 150px;
+
+            .playIcon {
+              padding: 0;
+              margin: 0;
+              color: gold;
+              font-size: 3rem;
+              transition: 0.3s;
+              cursor: pointer;
+
+              &:hover {
+                font-size: 4rem;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
